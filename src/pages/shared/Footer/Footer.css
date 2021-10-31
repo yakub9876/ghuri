@@ -1,0 +1,30 @@
+.footer{
+    background: url('../../../images//foot-bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 60px 0;
+}
+.footer ul li:not(:last-child){
+    list-style: none;
+    margin-bottom: 10px;
+    color: white;
+}
+.footer ul{
+    margin-left: 0;
+    padding: 0;
+}
+.footer ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer p{
+    color: white;
+    font-size: 16px;
+    font-weight: 300;
+}
+.footer h6{
+    color: white;
+}

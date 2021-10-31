@@ -1,0 +1,15 @@
+.subscribe{
+    position: relative;
+    margin-top: 80px;
+}
+.subscribe form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.subscribe form input{
+    height: 60px;
+    width: 300px;
+    padding-left: 20px;
+}

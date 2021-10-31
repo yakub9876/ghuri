@@ -1,0 +1,31 @@
+.nav-link a{
+    margin-left: 30px;
+    color: black;
+    text-decoration: none;
+}
+nav{
+    background-color: #fbfbfb;
+}
+.login{
+    color: white !important;
+    text-decoration: none;
+}
+.dropdown {
+    height: 50px;
+
+}
+.dropdown img{
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+.dropdown-toggle.btn {
+ padding: 0 10px;
+} .btn-primary{
+    background:#ca940d42 !important;
+    border: none;
+}
+.dropdown a{
+    text-decoration: none;
+    color: black;
+}

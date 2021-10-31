@@ -1,0 +1,26 @@
+.button-secondary{
+    width: 116px;
+    height: 44px;
+    background: #C6A349;
+    border-radius: 6px;
+    color: white;
+}
+.single-service img{
+    border-radius: 10px 10px 0 0;
+    height: 230px;
+    object-fit: cover;
+}
+.single-service{
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px 1px rgba(96, 96, 96, 0.1);
+    border-radius: 10px;
+}
+.single-service .content h4{
+    font-style: normal;
+    font-size: 18px;
+    line-height: 19px;
+    color: #000000;
+}
+.single-service .content {
+    padding: 15px;
+}
