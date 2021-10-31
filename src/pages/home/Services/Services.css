@@ -3,10 +3,41 @@
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 30px;
 }
+.services-area {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.services-area h2{
+    margin-bottom: 40px;
+    text-align: center;
+}
 @media only screen and (max-width: 600px) {
     .services {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         grid-gap: 30px;
     }
+}
+
+
+@media only screen and (min-width: 600px){
+     .services {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-gap: 30px;
+     }
+}
+@media only screen and (min-width: 768px) {
+     .services {
+         display: grid;
+         grid-template-columns: repeat(2, 1fr);
+         grid-gap: 30px;
+     }
+}
+@media only screen and (min-width: 992px) {
+     .services {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         grid-gap: 30px;
+     }
 }

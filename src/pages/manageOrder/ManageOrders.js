@@ -7,18 +7,24 @@ import SingleOrder from "../myOrder/singleOrder/SingleOrder";
 const ManageOrders = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
+
   useEffect(() => {
-    axios.get(`http://localhost:5000/myorder`).then((res) => {
+    axios.get(`https://ghuri-serversite.herokuapp.com/myorder`).then((res) => {
       setOrders(res.data);
     });
   }, [user]);
   console.log(orders);
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/myorderdelete/${id}`).then((res) => {
-      const newOrder = orders.filter((order) => order._id !== id);
-      setOrders(newOrder);
-      console.log(res);
-    });
+    const confirm = window.confirm("Are you sure Want to Delete?");
+    if (confirm) {
+      axios
+        .delete(`https://ghuri-serversite.herokuapp.com/myorderdelete/${id}`)
+        .then((res) => {
+          const newOrder = orders.filter((order) => order._id !== id);
+          setOrders(newOrder);
+          console.log(res);
+        });
+    }
   };
 
   return (

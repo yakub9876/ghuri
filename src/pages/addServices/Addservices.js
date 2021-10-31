@@ -8,9 +8,11 @@ const Addservices = () => {
   const { register, handleSubmit, reset } = useForm();
   const onSubmit = (data) => {
     console.log(data);
-    axios.post("http://localhost:5000/services", data).then((res) => {
-      console.log(res);
-    });
+    axios
+      .post("https://ghuri-serversite.herokuapp.com/services", data)
+      .then((res) => {
+        console.log(res);
+      });
     reset();
   };
   return (

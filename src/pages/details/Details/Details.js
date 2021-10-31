@@ -15,7 +15,7 @@ const Details = () => {
   const history = useHistory();
 
   useEffect(() => {
-    fetch("http://localhost:5000/services")
+    fetch("https://ghuri-serversite.herokuapp.com/services")
       .then((res) => res.json())
       .then((data) => setServices(data));
   }, []);
@@ -31,17 +31,19 @@ const Details = () => {
     booking.service = service;
     booking.status = "pending";
     console.log(booking);
-    axios.post("http://localhost:5000/booking", booking).then((res) => {
-      if (res.data.insertedId) {
-        alert("Successfully Booking");
-        history.push("/myorders");
-        reset();
-      } else {
-        alert("Already Booked");
-        history.push("/home");
-      }
-      console.log(res);
-    });
+    axios
+      .post("https://ghuri-serversite.herokuapp.com/booking", booking)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Successfully Booking");
+          history.push("/myorders");
+          reset();
+        } else {
+          alert("Already Booked");
+          history.push("/home");
+        }
+        console.log(res);
+      });
   };
   return (
     <div className="mt-5">

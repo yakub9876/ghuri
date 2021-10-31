@@ -12,6 +12,9 @@ import Details from "./pages/details/Details/Details";
 import MyOrder from "./pages/myOrder/MyOrder";
 import ManageOrders from "./pages/manageOrder/ManageOrders";
 import Addservices from "./pages/addServices/Addservices";
+import Services from "./pages/home/Services/Services";
+import AboutUs from "./pages/aboutUs/AboutUs";
+import PageNotFound from "./pages/pageNotFound/PageNotFound";
 
 function App() {
   return (
@@ -25,6 +28,12 @@ function App() {
             </Route>
             <Route exact path="/home">
               <Home></Home>
+            </Route>
+            <Route exact path="/services">
+              <Services></Services>
+            </Route>
+            <Route exact path="/aboutus">
+              <AboutUs></AboutUs>
             </Route>
             <PrivateRoute path="/serviceDetails/:id">
               <Details></Details>
@@ -40,6 +49,9 @@ function App() {
             </PrivateRoute>
             <Route exact path="/login">
               <Login></Login>
+            </Route>
+            <Route path="*">
+              <PageNotFound></PageNotFound>
             </Route>
           </Switch>
           <Footer></Footer>

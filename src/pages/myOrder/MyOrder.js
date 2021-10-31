@@ -8,17 +8,24 @@ const MyOrder = () => {
   const { user } = useAuth();
   const [orders, setOrders] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/myorder/${user?.email}`).then((res) => {
-      setOrders(res.data);
-    });
+    axios
+      .get(`https://ghuri-serversite.herokuapp.com/myorder/${user?.email}`)
+      .then((res) => {
+        setOrders(res.data);
+      });
   }, [user]);
-  console.log(orders);
+
   const handleDelete = (id) => {
-    axios.delete(`http://localhost:5000/myorderdelete/${id}`).then((res) => {
-      const newOrder = orders.filter((order) => order._id !== id);
-      setOrders(newOrder);
-      console.log(res);
-    });
+    const confirm = window.confirm("Are you sure Want to Delete?");
+    if (confirm) {
+      axios
+        .delete(`https://ghuri-serversite.herokuapp.com/myorderdelete/${id}`)
+        .then((res) => {
+          const newOrder = orders.filter((order) => order._id !== id);
+          setOrders(newOrder);
+          console.log(res);
+        });
+    }
   };
 
   return (
