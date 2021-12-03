@@ -29,9 +29,9 @@ const MyOrder = () => {
   };
 
   return (
-    <div>
+    <div className="text-center mt-3 mb-3">
       <Container>
-        <h2>this is my orders</h2>
+        <h2>My Orders</h2>
         {orders.map((order) => (
           <SingleOrder
             key={order?._id}
